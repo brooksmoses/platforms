@@ -59,6 +59,12 @@ constraint_value(
     constraint_setting = ":cpu",
 )
 
+# Lightweight Fault Isolation on AArch64 (https://llvm.org/docs/LFI.html)
+constraint_value(
+    name = "aarch64_lfi",
+    constraint_setting = ":cpu",
+)
+
 alias(
     name = "arm",
     actual = ":aarch32",
@@ -168,6 +174,12 @@ constraint_value(
 
 constraint_value(
     name = "x86_64",
+    constraint_setting = ":cpu",
+)
+
+# Lightweight Fault Isolation on x86-64 (https://llvm.org/docs/LFI.html)
+constraint_value(
+    name = "x86_64_lfi",
     constraint_setting = ":cpu",
 )
 
